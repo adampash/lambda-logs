@@ -8,6 +8,8 @@ if [ -z "$1" ]; then
 
   max-items: the number of log streams to pull from AWS. This will ultimately
   determine the number of logs in the output. Default value is 100.
+  Note: this is not the total number of logs, but the number of streams;
+  streams contain many logs.)
 "
 
 else

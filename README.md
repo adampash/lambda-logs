@@ -8,14 +8,15 @@ A simple CLI script to pull Report logs from AWS CloudWatch for Lambda functions
 ./get-logs.sh name-of-lambda-function [max-items=100]
 
 #  max-items: the number of log streams to pull from AWS. This will ultimately
-#  determine the number of logs in the output. Default value is 100.
+#  determine the number of logs in the output. Default value is 100. (Note:
+#  this is not the total number of logs, but the number of streams; streams
+#  contain many logs.)
 ```
 
 Logs will look something like:
 
 ```
 REPORT RequestId: 706f87a3-d6b9-11e6-95d8-2be4fec37c55	Duration: 995.78 ms	Billed Duration: 1000 ms 	Memory Size: 1024 MB	Max Memory Used: 83 MB
-
 ```
 
 This script assumes you have the aws-cli installed (`pip install awscli`),
